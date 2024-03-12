@@ -1,0 +1,60 @@
+/* Existing styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #feda4a;
+}
+
+.poster {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Creates a 12-column grid */
+    grid-template-rows: minmax(100px, auto) repeat(3, 1fr) minmax(200px, auto); /* Adjust row sizes */
+    height: 100vh;
+    position: relative;
+    padding: 2vw; /* Add some padding */
+}
+
+.bill-text {
+    font-size: 9vw; /* Adjusted for grid */
+    font-weight: bold;
+    color: #000;
+    text-transform: lowercase;
+    /* Position the text in the center */
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    transform: rotate(-90deg); /* Rotate the 'bill' text */
+}
+
+.additional-text {
+    font-size: 1.5vw;
+    color: #000;
+    white-space: nowrap;
+    align-self: center;
+}
+
+/* Positioning the additional-text elements */
+.text-1 {
+    grid-column: 2 / span 6;
+    grid-row: 1;
+}
+
+.text-2 {
+    grid-column: 2 / span 6;
+    grid-row: 2;
+}
+
+.text-3 {
+    grid-column: 2 / span 6;
+    grid-row: 4;
+}
+
+.text-4 {
+    grid-column: 2 / span 6;
+    grid-row: 5;
+    font-size: 1vw; /* Smaller font size for longer text */
+    align-self: start; /* Align to the start of the grid row */
+}

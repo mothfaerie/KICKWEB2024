@@ -1,0 +1,35 @@
+/*-----Tags----*/
+body{color:pink;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(128, 104, 80);
+    anim
+}
+
+@import url('https://fonts.google.com/specimen/Jacquarda+Bastarda+9');
+body {
+  font-family: 'Roboto', sans-serif;
+
+
+h1{font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+p{
+
+}
+
+/*-----ID----*/
+#poetry{
+
+}
+
+/*-----Klassen----*/
+.first{
+
+}
+.second{
+
+}
+.third{
+
+}
