@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bill Poster</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #feda4a;
+    overflow: hidden; /* Prevents scrolling */
+  }
+  .poster {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .bill-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw; /* Adjust size as needed */
+    font-weight: bold;
+    color: #000;
+    text-transform: lowercase;
+  }
+  /* Additional styles for other text */
+  .additional-text {
+    position: absolute;
+    font-size: 1.5vw; /* Adjust size as needed */
+    color: #000;
+    white-space: nowrap;
+  }
+  .text-1 { top: 10%; left: 10%; }
+  .text-2 { top: 70%; left: 10%; }
+  .text-3 { bottom: 10%; left: 10%; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="bill-text">bill</div>
+  <div class="additional-text text-1">max bill: werbegrafik und buchgestaltung 1930-1955</div>
+  <div class="additional-text text-2">museum für gestaltung zürich</div>
+  <div class="additional-text text-3">12.12.1998-7.3.1999</div>
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
